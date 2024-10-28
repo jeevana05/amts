@@ -1,0 +1,17 @@
+/* .scheduleimg {
+     Add your desired styles here, e.g., width, height, margin, padding, etc. 
+    width: 100%;  Make the image responsive 
+    height: auto;
+} */
+
+
+.scheduleContainer {
+    display: flex;
+    gap: 20px; /* Adjust space between images if needed */
+    justify-content: center;
+    align-items: center;
+}
+
+.scheduleImg {
+    border-radius: 10px; /* Optional styling */
+}

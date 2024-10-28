@@ -1,13 +1,43 @@
-import Links from "./links/Links"
-import styles from  "./navbar.module.css"
-const Navbar= ()=>{
-    return(
+// import Link from "next/link"
+// import Links from "./links/Links"
+// import styles from  "./navbar.module.css"
+// const Navbar= ()=>{
+//     return(
+//         <div className={styles.container}>
+//             <Link href="/" className={styles.logo}>Logo</Link>
+//             <div>
+//                 <Links/>
+//             </div>
+//         </div>
+//     )
+// } 
+// export default Navbar
+
+
+import Link from "next/link";
+import Image from "next/image"; // Import Image from Next.js
+import Links from "./links/Links";
+import styles from "./navbar.module.css";
+
+const Navbar = () => {
+    return (
         <div className={styles.container}>
-            <div className={styles.logo}>Logo</div>
+            <Link href="/" className={styles.logo}>
+                <div className={styles.brands} style={{ marginTop: '10px' }}> {/* Adjust margin as needed */}
+                    <Image 
+                        src="/logo.png" 
+                        alt="Logo" 
+                        width={50} 
+                        height={50} 
+                        className={styles.brandImg} 
+                    />
+                </div>
+            </Link>
             <div>
-                <Links/>
+                <Links />
             </div>
         </div>
-    )
-} 
-export default Navbar
+    );
+};
+
+export default Navbar;
